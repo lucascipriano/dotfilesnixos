@@ -10,6 +10,7 @@
 
 ## Importante!
 - Altere `initialPassword` nas `configuration.nix`, pois por padrão é `premium`.
+- Altere a `hardware-configuration.nix` do `flakeconfig` para igual a sua.
 - Depois que você configura o Flakes, os arquivos `/etc/nixos` e `.config/nixpkgs` são "descartaveis", mantenha e edite tudo pela pasta `nix-starter`
 ---
 ## Repository structure
@@ -17,7 +18,9 @@
    
 - `Templates`: [Nix Flake]() templates that I use to start new projects or package existing ones. 
     - use `nix flake init -t github:ratsclub(editarmeuuser)/dotfiles#templates.go `and `nix develop`.
-- `Nix-Starter`: Config and install Flakes [README pls](https://github.com/Misterio77/nix-starter-config)
+- `Flake config`: Config and install Flakes [README pls](https://github.com/Misterio77/nix-starter-config)
+    - After reload `nixos-rebuild switch --flake `
+
 ---
 ## Credits
 
