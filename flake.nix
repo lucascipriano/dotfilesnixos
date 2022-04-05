@@ -1,7 +1,7 @@
 {
     description = "My personal dotfiles";
 
-    outputs = { ... }@inputs:{
+    outputs = { ... }:{
         templates = import ./templates;
     };
 }
