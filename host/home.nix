@@ -16,41 +16,6 @@
   # changes in each release.
   home.stateVersion = "21.11";
 
+  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
- 
-  home.packages = [
-    pkgs.htop
-    pkgs.tdesktop
-    pkgs.pcmanfm
-    pkgs.vscodium
-  ];
-
-  programs.vim = {
-    enable = true;
-    plugins = with pkgs.vimPlugins; [ 
-      vim-airline
-      vim-nix
-      nerdtree 
-      onehalf
-    ];
-    settings = { ignorecase = true; };
-    extraConfig = ''
-      syntax on
-      set hidden
-      set number
-      set relativenumber
-      set title
-      set cursorline
-      set encoding=utf-8
-      set expandtab
-      set shiftwidth=2
-      set mouse=a
-      colorscheme onehalfdark
-      let g:airline_theme='onehalfdark'
-    '';
-  };
-
-
-
 }
