@@ -88,8 +88,18 @@
 
   # Enable the KDE Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.windowManager.i3.enable = true;
+  #services.xserver.windowManager.i3.enable = true;
   #services.xserver.desktopManager.xfce.enable = true;
+
+    services.xserver.windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [
+        dmenu
+        i3status
+        i3lock
+        i3blocks
+     ];
+    };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
    users.users.lucas = {
